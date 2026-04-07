@@ -65,6 +65,11 @@
       <section class="product-hero" id="top" aria-labelledby="product-title">
         <div class="shell product-hero__grid">
           <div class="product-hero__gallery">
+            <nav class="breadcrumb product-hero__breadcrumb" aria-label="Breadcrumb">
+              <a href="#top">Products</a>
+              <span class="breadcrumb__sep" aria-hidden="true">&gt;</span>
+              <span class="breadcrumb__current">Two For One Twister</span>
+            </nav>
             <div
               class="carousel"
               id="carousel"
@@ -104,28 +109,75 @@
                     aria-label="Image thumbnails"
                   ></div>
                 </div>
-                <aside class="carousel__zoom-panel" id="zoomPanel" aria-hidden="true">
-                  <p class="carousel__zoom-label" id="zoomLabel">Zoom preview</p>
-                  <div
-                    class="carousel__zoom-viewport"
-                    id="zoomViewport"
-                    role="img"
-                    aria-labelledby="zoomLabel"
-                  ></div>
-                </aside>
               </div>
             </div>
           </div>
 
           <div class="product-hero__detail">
-            <nav class="breadcrumb" aria-label="Breadcrumb">
-              <a href="#top">Products</a>
-              <span class="breadcrumb__sep" aria-hidden="true">/</span>
-              <span class="breadcrumb__current">Two For One Twister</span>
-            </nav>
-            <h1 class="product-hero__title" id="product-title">
-              Premium HDPE Pipes &amp; Coils for Modern Infrastructure
-            </h1>
+            <ul class="product-hero__cert-badges" aria-label="Certifications">
+              <li class="cert-badge">
+                <span class="cert-badge__icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M3 16L10 3l7 13H3z" fill="#E8850C" />
+                    <path d="M4.8 14L10 4.25 15.2 14H4.8z" fill="#fff" />
+                    <path d="M6 12.75L10 6.5 14 12.75H6z" fill="#1a6b1a" />
+                  </svg>
+                </span>
+                <span>BIS certified</span>
+              </li>
+              <li class="cert-badge">
+                <span class="cert-badge__icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <rect x="3.5" y="2.5" width="13" height="15" rx="1.75" fill="var(--color-blue)" />
+                    <path
+                      d="M6.5 10.2l2.2 2.2 4.8-5.4"
+                      stroke="#fff"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                <span>ISO certified</span>
+              </li>
+              <li class="cert-badge">
+                <span class="cert-badge__icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <rect x="3" y="3" width="14" height="14" rx="2" stroke="#2d3748" stroke-width="1.35" fill="#f7fafc" />
+                    <text
+                      x="10"
+                      y="13.5"
+                      text-anchor="middle"
+                      font-size="7.5"
+                      font-weight="700"
+                      fill="#2d3748"
+                      font-family="system-ui, Segoe UI, sans-serif"
+                    >
+                      CE
+                    </text>
+                  </svg>
+                </span>
+                <span>CE certified</span>
+              </li>
+            </ul>
+            <div class="product-hero__title-stack">
+              <aside
+                class="carousel__zoom-panel carousel__zoom-panel--title-overlay"
+                id="zoomPanel"
+                aria-hidden="true"
+              >
+                <span class="visually-hidden" id="zoomLabel">Zoom preview</span>
+                <div
+                  class="carousel__zoom-viewport"
+                  id="zoomViewport"
+                  role="img"
+                  aria-labelledby="zoomLabel"
+                ></div>
+              </aside>
+              <h1 class="product-hero__title" id="product-title">
+                Premium HDPE Pipes &amp; Coils for Modern Infrastructure
+              </h1>
+            </div>
             <ul class="product-features">
               <li>Leak-proof fusion joints</li>
               <li>Chemical resistance for aggressive media</li>
@@ -134,8 +186,22 @@
               <li>Full traceability &amp; batch documentation</li>
             </ul>
             <div class="price-box">
+              <p class="price-box__label">Price range</p>
               <p class="price-box__range">₹4,80,000 – ₹7,90,000</p>
-              <p class="price-box__meta">Shipping calculated at quote · Returns per policy</p>
+              <div class="price-box__row price-box__row--duo" role="group" aria-label="Shipping and returns">
+                <p class="price-box__pill price-box__pill--highlight">
+                  <span class="price-box__pill-key">Shipping:</span>
+                  6–12 days
+                </p>
+                <p class="price-box__pill price-box__pill--highlight">
+                  <span class="price-box__pill-key">Returns:</span>
+                  If returned within 7 days
+                </p>
+              </div>
+              <p class="price-box__pill price-box__pill--neutral">
+                <span class="price-box__pill-key">Certifications:</span>
+                ISO Certified, BIS Certified
+              </p>
             </div>
             <div class="product-hero__actions">
               <a class="btn btn--primary btn--wide" href="#contact">Get Custom Quote</a>

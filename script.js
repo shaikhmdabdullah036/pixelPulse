@@ -132,6 +132,10 @@
       var lens = document.createElement("div");
       lens.className = "carousel__lens";
       lens.setAttribute("aria-hidden", "true");
+      var lensIcon = document.createElement("span");
+      lensIcon.className = "carousel__lens-icon";
+      lensIcon.setAttribute("aria-hidden", "true");
+      lens.appendChild(lensIcon);
 
       inner.appendChild(img);
       inner.appendChild(lens);
@@ -285,14 +289,12 @@
 
   function syncLensBackground(lens, img) {
     if (!lens || !img) return;
-    setZoomBackground(lens, img);
     lens.classList.add("is-visible");
   }
 
   function hideLens(lens) {
     if (!lens) return;
     lens.classList.remove("is-visible");
-    lens.style.backgroundImage = "";
   }
 
   function updateLensPosition(e, innerEl, lens, img) {
@@ -307,9 +309,6 @@
     var top = clamp(cy - lensH / 2, 0, rect.height - lensH);
     lens.style.left = left + "px";
     lens.style.top = top + "px";
-    var x = clamp(cx / rect.width, 0, 1);
-    var y = clamp(cy / rect.height, 0, 1);
-    lens.style.backgroundPosition = x * 100 + "% " + y * 100 + "%";
   }
 
   function deactivateZoom() {
@@ -328,12 +327,9 @@
   }
 
   function applyZoomForActiveSlideNoHover() {
-    if (!slides.length || prefersFinePointerHover()) return;
-    var li = slides[currentIndex];
-    var img = li && li.querySelector("img");
-    if (!img) return;
-    activateZoomFromSlide(li, img);
-    zoomViewport.style.backgroundPosition = "50% 50%";
+    if (!slides.length) return;
+    /* Preview sits over the title — only show it with fine-pointer hover, not stuck on for touch */
+    if (!prefersFinePointerHover()) deactivateZoom();
   }
 
   buildCarousel();
