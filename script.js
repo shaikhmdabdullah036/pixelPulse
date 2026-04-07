@@ -135,6 +135,12 @@
       var lensIcon = document.createElement("span");
       lensIcon.className = "carousel__lens-icon";
       lensIcon.setAttribute("aria-hidden", "true");
+      lensIcon.innerHTML =
+        '<svg class="carousel__lens-icon-svg" width="54" height="54" viewBox="0 0 56 56" aria-hidden="true">' +
+        '<path d="M36 38l14 14" fill="none" stroke="#111" stroke-width="3.25" stroke-linecap="round"/>' +
+        '<circle cx="24" cy="24" r="14" fill="#fff" stroke="#111" stroke-width="2.75"/>' +
+        '<path d="M24 17.5v13M17.5 24h13" fill="none" stroke="#111" stroke-width="2.25" stroke-linecap="round"/>' +
+        "</svg>";
       lens.appendChild(lensIcon);
 
       inner.appendChild(img);
@@ -289,26 +295,33 @@
 
   function syncLensBackground(lens, img) {
     if (!lens || !img) return;
+    setZoomBackground(lens, img);
+    lens.style.backgroundPosition = "50% 50%";
     lens.classList.add("is-visible");
   }
 
   function hideLens(lens) {
     if (!lens) return;
     lens.classList.remove("is-visible");
+    lens.style.backgroundImage = "";
+    lens.style.backgroundPosition = "";
   }
 
   function updateLensPosition(e, innerEl, lens, img) {
     if (!innerEl || !lens || !img) return;
     var rect = innerEl.getBoundingClientRect();
     if (rect.width < 1 || rect.height < 1) return;
-    var lensW = lens.offsetWidth || 120;
-    var lensH = lens.offsetHeight || 120;
+    var lensW = lens.offsetWidth || 118;
+    var lensH = lens.offsetHeight || 118;
     var cx = e.clientX - rect.left;
     var cy = e.clientY - rect.top;
     var left = clamp(cx - lensW / 2, 0, rect.width - lensW);
     var top = clamp(cy - lensH / 2, 0, rect.height - lensH);
     lens.style.left = left + "px";
     lens.style.top = top + "px";
+    var x = clamp(cx / rect.width, 0, 1);
+    var y = clamp(cy / rect.height, 0, 1);
+    lens.style.backgroundPosition = x * 100 + "% " + y * 100 + "%";
   }
 
   function deactivateZoom() {
