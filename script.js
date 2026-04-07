@@ -53,7 +53,6 @@
     return String(fullSrc).replace(/w=\d+/, "w=200");
   }
 
-  /* ---------- Mobile nav ---------- */
 
   function closeMobileNav() {
     if (navPanel) navPanel.classList.remove("is-open");
@@ -74,7 +73,6 @@
     });
   }
 
-  /* ---------- Products dropdown ---------- */
 
   function closeProductsMenu() {
     if (!productsBtn || !productsMenu) return;
@@ -105,7 +103,6 @@
     });
   }
 
-  /* ---------- Carousel ---------- */
 
   var currentIndex = 0;
   var slides = [];
@@ -260,7 +257,6 @@
     }
   }
 
-  /* ---------- Zoom ---------- */
 
   function setZoomBackground(el, img) {
     if (!el || !img) return;
@@ -351,7 +347,6 @@
     });
   }
 
-  /* ---------- Manufacturing process tabs ---------- */
 
   var PROCESS_STEPS = [
     {
@@ -478,7 +473,6 @@
 
   initProcessTabs();
 
-  /* ---------- Applications horizontal scroll ---------- */
 
   function initAppsCarousel() {
     var view = document.querySelector(".applications__viewport");
@@ -498,7 +492,6 @@
 
   initAppsCarousel();
 
-  /* ---------- Resource download stubs ---------- */
 
   document.querySelectorAll("[data-dl]").forEach(function (a) {
     a.addEventListener("click", function (e) {

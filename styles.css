@@ -89,7 +89,6 @@ body {
   border: 0;
 }
 
-/* Horizontal padding: Figma-style ~100px desktop, tighter on small screens */
 .shell {
   width: 100%;
   max-width: 1600px;
@@ -114,7 +113,6 @@ body {
   font-weight: 600;
 }
 
-/* ---------- Main header / nav ---------- */
 
 .site-header {
   position: relative;
@@ -321,7 +319,6 @@ body {
   color: var(--color-blue);
 }
 
-/* Single Contact Us in the header */
 .site-nav__cta {
   flex-shrink: 0;
   font-size: 0.8125rem;
@@ -336,7 +333,6 @@ body {
   }
 }
 
-/* Buttons */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -408,7 +404,6 @@ body {
   }
 }
 
-/* ---------- Product hero (carousel + detail) ---------- */
 
 .product-hero {
   background: var(--color-hero-bg);
@@ -494,7 +489,6 @@ body {
   color: var(--color-muted);
 }
 
-/* ---------- Carousel product ---------- */
 
 .carousel:focus-visible {
   outline: none;
@@ -710,7 +704,6 @@ body {
   }
 }
 
-/* Logo cloud */
 .logo-cloud {
   padding-block: clamp(2.5rem, 4vw, 4rem);
   background: var(--color-surface);
@@ -746,7 +739,6 @@ body {
   }
 }
 
-/* Specs band */
 .specs {
   background: var(--color-navy-deep);
   color: #e8eaed;
@@ -825,7 +817,6 @@ body {
   font-size: 1.1rem;
 }
 
-/* ---------- Post-specs: shared section headers ---------- */
 
 .section-head {
   text-align: center;
@@ -864,7 +855,6 @@ body {
   line-height: 1.55;
 }
 
-/* Built + feature grid */
 .built {
   padding-block: clamp(3.5rem, 7vw, 6rem);
   background: var(--color-surface);
@@ -954,7 +944,6 @@ body {
   width: 100%;
 }
 
-/* Manufacturing process tabs */
 .process {
   padding-block: clamp(3.5rem, 7vw, 6rem);
   background: var(--color-hero-bg);
@@ -1097,7 +1086,6 @@ body {
   right: 10px;
 }
 
-/* Testimonials */
 .testimonials {
   padding-block: clamp(3.5rem, 7vw, 6rem);
   background: var(--color-surface);
@@ -1163,7 +1151,6 @@ body {
   }
 }
 
-/* Portfolio */
 .portfolio {
   padding-block: clamp(3rem, 6vw, 5rem);
   background: var(--color-hero-bg);
@@ -1258,7 +1245,6 @@ body {
   font-size: 1rem;
 }
 
-/* Resources */
 .resources {
   padding-block: clamp(3rem, 6vw, 5rem);
   background: var(--color-surface);
@@ -1316,7 +1302,6 @@ body {
   text-decoration: underline;
 }
 
-/* FAQ */
 .faq {
   padding-block: clamp(3.5rem, 7vw, 6rem);
   background: var(--color-hero-bg);
@@ -1428,7 +1413,6 @@ body {
   font-size: 0.9rem;
 }
 
-/* Applications carousel */
 .applications {
   padding-block: clamp(3.5rem, 7vw, 6rem);
   background: var(--color-surface);
@@ -1539,7 +1523,6 @@ body {
   opacity: 0.92;
 }
 
-/* Contact block */
 .contact-block {
   padding-block: clamp(3.5rem, 7vw, 6rem);
   background: linear-gradient(160deg, var(--color-navy-deep) 0%, #0a1628 100%);
@@ -1631,7 +1614,6 @@ body {
   margin-top: 0.5rem;
 }
 
-/* Mega footer */
 .site-footer--mega {
   padding: 0;
   border-top: none;
@@ -1790,7 +1772,6 @@ body {
   color: var(--color-blue);
 }
 
-/* ---------- Mobile layout polish (Figma / screenshot alignment) ---------- */
 
 @media (max-width: 47.99rem) {
   .shell {
@@ -1801,7 +1782,6 @@ body {
     max-width: none;
   }
 
-  /* Specs: balanced type + full-width outline CTA */
   .specs__heading,
   .specs__intro {
     text-align: left;
@@ -1848,7 +1828,6 @@ body {
     color: #fff;
   }
 
-  /* Built: left-aligned copy like mobile frames */
   .built .section-head {
     text-align: left;
     margin-inline: 0;
@@ -1859,7 +1838,6 @@ body {
     text-align: left;
   }
 
-  /* Process: readable contrast on dark band */
   .process {
     background: #4b5563;
   }
@@ -1888,7 +1866,6 @@ body {
     padding-inline: 0.25rem;
   }
 
-  /* Testimonials: horizontal snap, all cards visible */
   .testimonial-grid {
     display: flex;
     gap: 1rem;
@@ -1909,7 +1886,6 @@ body {
     display: flex;
   }
 
-  /* Portfolio CTA bar */
   .portfolio__cta-bar {
     align-items: stretch;
     text-align: center;
@@ -1920,7 +1896,6 @@ body {
     text-align: center;
   }
 
-  /* FAQ: card stack */
   .faq .section-head {
     text-align: left;
     margin-inline: 0;
@@ -1960,7 +1935,6 @@ body {
     width: 100%;
   }
 
-  /* Applications: no horizontal bleed; centered snap */
   .applications__viewport {
     margin: 0;
     padding-inline: 0;
@@ -1991,7 +1965,6 @@ body {
     overflow: hidden;
   }
 
-  /* Contact: inset rounded panel on light band */
   .contact-block {
     background: var(--color-hero-bg);
   }
@@ -2007,7 +1980,6 @@ body {
     max-width: none;
   }
 
-  /* Footer: centered brand card, even gutters */
   .site-footer--mega {
     background: #eceef1;
   }
