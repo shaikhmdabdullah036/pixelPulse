@@ -1,4 +1,4 @@
-# pixelPulse — Mangalam HDPE Pipes (landing page)
+# PixelPulse — Mangalam HDPE Pipes (landing page)
 
 A **single-page marketing site** for an HDPE pipes and coils manufacturer. The layout is implemented in **vanilla HTML, CSS, and JavaScript** (no frameworks), with structure and visual language aligned to typical **Figma / design-handoff** product pages: hero gallery, specifications, feature grids, process storytelling, social proof, resources, FAQs, and a contact block.
 
